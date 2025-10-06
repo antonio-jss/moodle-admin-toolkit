@@ -1,1 +1,152 @@
+/**************************************************************
+ * File: custom-css/styles_basic.css
+ * Purpose: Basic custom styling overrides for Moodle theme.
+ * Author: {{Your Name}}
+ * Notes:
+ *  - All modifications are kept minimal and compatible with Moodle upgrades.
+ *  - Styles are intended to improve readability, branding, and usability.
+ **************************************************************/
+
+/* -----------------------------------------------------------
+   1. GLOBAL TYPOGRAPHY & COLORS
+   ----------------------------------------------------------- */
+
+/* Adjust global font family to improve readability and match corporate branding */
+body {
+  font-family: "Open Sans", Arial, sans-serif !important; /* widely used for e-learning interfaces */
+  color: #2b2b2b; /* slightly darker than default for better contrast */
+  background-color: #f9fafc; /* subtle gray background to reduce visual fatigue */
+}
+
+/* Harmonize Moodle blue tone with institutional color palette */
+a,
+a:visited {
+  color: #004c97; /* example: deep corporate blue */
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #0073e6; /* lighter tone for hover state */
+  text-decoration: underline;
+}
+
+/* -----------------------------------------------------------
+   2. HEADER & NAVIGATION BAR
+   ----------------------------------------------------------- */
+
+/* Increase navbar height for better touch usability and visual balance */
+.navbar {
+  min-height: 60px;
+  background-color: #003366; /* corporate dark blue header */
+  border-bottom: 3px solid #0073e6; /* subtle accent line */
+}
+
+/* Improve logo alignment and size consistency */
+.navbar .logo img {
+  max-height: 45px;
+  vertical-align: middle;
+}
+
+/* Change breadcrumb appearance for cleaner navigation trail */
+.breadcrumb {
+  background: transparent;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* -----------------------------------------------------------
+   3. COURSE CARDS & DASHBOARD
+   ----------------------------------------------------------- */
+
+/* Add soft shadows and rounded corners to course cards */
+.coursebox,
+.dashboard-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+}
+
+/* Highlight enrolled courses with a subtle color */
+.coursebox.enrolled {
+  border-left: 5px solid #0073e6;
+}
+
+/* Improve the visibility of the "course progress" bar */
+.progress-bar {
+  height: 12px;
+  border-radius: 6px;
+  background-color: #e6e6e6;
+}
+.progress-bar-fill {
+  background-color: #28a745; /* success green tone */
+}
+
+/* -----------------------------------------------------------
+   4. BUTTONS & FORM ELEMENTS
+   ----------------------------------------------------------- */
+
+/* Apply consistent styling to primary action buttons */
+.btn-primary {
+  background-color: #0073e6;
+  border-color: #0073e6;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background-color: #005bb5;
+  border-color: #005bb5;
+}
+
+/* Make form inputs slightly larger for accessibility */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  border-radius: 6px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* -----------------------------------------------------------
+   5. FOOTER
+   ----------------------------------------------------------- */
+
+/* Simplify the footer to a clean, minimal corporate layout */
+#page-footer {
+  background-color: #00264d;
+  color: #ffffff;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+#page-footer a {
+  color: #66b3ff;
+}
+#page-footer a:hover {
+  color: #ffffff;
+}
+
+/* -----------------------------------------------------------
+   6. RESPONSIVE TWEAKS
+   ----------------------------------------------------------- */
+
+/* Improve padding and alignment on small screens */
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .dashboard-card {
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    width: 100%; /* easier to tap on mobile devices */
+  }
+}
+
+/**************************************************************
+ * End of custom styles
+ **************************************************************/
 
